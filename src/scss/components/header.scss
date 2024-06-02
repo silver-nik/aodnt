@@ -6,6 +6,12 @@
   @media(max-width: 992px) {
     margin-bottom: 20px;
   }
+
+  @media(max-width: 576px) {
+    .header__container {
+      max-width: 324px;
+    }
+  }
   
   &::after {
     content: '';

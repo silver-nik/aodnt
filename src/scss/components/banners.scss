@@ -6,6 +6,12 @@
         padding-bottom: 42px;
     }
 
+    @media(max-width: 576px) {
+        .banners__content {
+            padding: 0;
+        }
+    }
+
     .banners__item {
         background: #fff;
         justify-content: space-between;
