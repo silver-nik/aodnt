@@ -1,0 +1,316 @@
+.posters {
+    font-family: 'Muller', sans-serif;
+    padding-bottom: 77px;
+
+    @media(max-width: 992px) {
+        padding-bottom: 48px;
+    }
+
+    @media(max-width: 576px) {
+        padding-bottom: 40px;
+    }
+
+    .posters__title-container {
+        margin-bottom: 57px;
+
+        @media(max-width: 992px) {
+            margin-bottom: 25px;
+        }
+
+        @media(max-width: 576px) {
+            margin-bottom: 21px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+    }
+
+    .posters__contact {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14px;
+        color: #000;
+
+        @media(max-width: 576px) {
+            order: 2;
+            width: fit-content;
+        }
+
+    }
+
+    .posters__list {
+        gap: 30px;
+
+        @media(max-width: 992px) {
+            gap: 20px;
+            width: 965px;
+        }
+        
+        .poster__title {
+            font-size: 21px;
+            font-weight: 800;
+            line-height: 21px;
+
+            @media(max-width: 992px) {
+                font-size: 18px;
+                line-height: 18px;
+            }
+
+        }
+
+        .poster__tag {
+            clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 5px, 100% 100%, 0 100%);
+            font-size: 14px;
+            font-weight: 900;
+            line-height: 14px;
+            text-transform: lowercase;
+            display: flex;
+            height: 27px;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .poster__item {
+            background: #fff;
+            height: 436px;
+            max-width: 270px;
+            clip-path: polygon(
+                    100% 0,
+                    100% calc(100% - 122px),
+                    calc(100% - 10px) calc(100% - 96px),
+                    100% calc(100% - 75px),
+                    100% 100%,
+                    0 100%,
+                    0 0
+                    );
+
+            @media(max-width: 992px) {
+                height: 366px;
+                max-width: 227px;
+                width: 227px;
+            }
+
+            .poster {
+                justify-content: space-between;
+                display: flex;
+                flex-direction: column; 
+                padding: 28px 0;
+
+                @media(max-width: 992px) {
+                    padding: 17px 0;
+                }
+
+            }
+
+            .poster__age {
+                font-size: 16px;
+                font-weight: 900;
+                line-height: 16px;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 45px;
+                height: 39px;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 19px 100%, 0% calc(100% - 7px));
+                background: #f84435;
+                position: absolute;
+                right: 0;
+                top: 0;
+
+            }
+
+            .poster__header {
+                padding-left: 24px;
+                gap: 25px;
+
+                @media(max-width: 992px) {
+                    gap: 15px;
+                    padding-left: 14px;
+                }
+
+                .poster__tag {
+                    background: #000;
+                    color: #fff;
+                    width: fit-content;
+                }
+
+                .poster__title {
+                    color:#000;
+                }
+
+            }
+
+            .poster__body {
+                height: 243px;
+
+                @media(max-width: 992px) {
+                    height: 205px;
+                }
+
+                .poster__img {
+                    width: 100%;
+                    object-fit: contain;
+                    clip-path: polygon(0 46px, 70px 0, 100% 0, 100% 100%, 0 100%);
+                    height: 175px;
+
+                    @media(max-width: 992px) {
+                        height: 126px;
+                        clip-path: polygon(0 34px, 70px 0, 100% 0, 100% 100%, 0 100%);
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                }
+
+                .poster__link-container {
+                    padding-top: 27px;
+
+                    @media(max-width: 992px) {
+                        padding-top: 20px;
+                    }
+
+                    .poster__link {
+                        width: 112px;
+                        height: 40px;
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 12px;
+                        text-transform: uppercase;
+                        clip-path: polygon(calc(100% - 19px) 0%, 100% 7px, 100% 100%, 0 100%, 0 0);
+
+                    }
+
+                }
+
+                .poster__icon {
+                    width: 46px;
+                    height: 40px;
+                    clip-path: polygon(19px 0%, 100% 0, 100% 100%, 0 100%, 0 7px);
+
+                    img {
+                        width: 17px;
+                        height: 17px;
+                    }
+
+                    &.poster__toggler {
+                        display: none;
+                        background: #000;
+
+                        &:hover {
+                            background:#F84435;
+                        }
+
+                    }
+
+                }
+
+            }
+
+            &:hover {
+                .poster__toggler {
+                    display: flex !important;
+                }
+            }
+
+        }
+
+        .poster__cover {
+            background: #000;
+            position: absolute;
+            top: 0;
+            right: 0;
+            clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%, 0% 13.91%, 3.9% 21.08%, 0% 28.25%, 0% 48.26%, 3.9% 55.94%, 0% 63.61%);
+            padding: 33px 10px 0 24px;
+            display: none;
+            z-index: 10;
+
+            &.active {
+                display: block;
+            }
+
+            .poster__close {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 45px;
+                height: 39px;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 19px 100%, 0% calc(100% - 7px));
+                background: #fff;
+                position: absolute;
+                right: 0;
+                top: 0;
+
+                svg {
+                    width: 14px;
+                    height: 14px;
+                }
+
+            }
+            
+            .poster__title {
+                color: #fff;
+                display: flex;
+                margin-bottom: 24px;
+            }
+
+            .cover__content {
+                margin-bottom: 32px;
+
+                .cover__date{
+                    background: #fff;
+                    color: #000;
+                    width: 98px;
+                    margin-bottom: 19px;
+                }
+
+                .cover__times {
+                    gap: 18px;
+
+                    .cover__time {
+                        background: #fff;
+                        width: 64px;
+                        height: 32px;
+                        padding: 2px;
+                        position: relative;
+
+                        a {
+                            color: #fff;
+                        }
+
+                        &:hover::after {
+                            background: #F84435;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            top: 2px;
+                            left: 2px;
+                            width: calc(100% - 4px);
+                            height: calc(100% - 4px);
+                            background-color:#000;
+                            clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 5px, 100% 100%, 0 100%);
+                            z-index: -1;
+                        }
+
+                    }
+
+                }
+                
+            }
+        }
+
+    }
+
+    .poster__item.active {
+        clip-path: none;
+
+        .poster {
+            display: none;
+        }
+    }
+
+}

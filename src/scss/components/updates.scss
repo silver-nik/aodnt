@@ -1,0 +1,116 @@
+.updates {
+    background: #fff;
+    font-family: 'Muller', sans-serif;
+    padding: 80px 0;
+
+    @media(max-width: 992px) {
+        padding: 48px 0;
+    }
+
+    @media(max-width: 576px) {
+        padding: 30px 0;
+    }
+
+    .updates__title-container {
+        padding-bottom: 41px;
+        justify-content: center;
+
+        @media(max-width: 992px) {
+            padding-bottom: 30px;
+        }
+
+        @media(max-width: 576px) {
+            padding-bottom: 19px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .col-4:first-child {
+               order: 2;
+               width: 150px;
+            }
+
+        }
+
+    }
+
+    .updates__list {
+        gap: 30px;
+
+        @media(max-width: 992px) {
+            gap: 20px;
+            width: 965px;
+        }
+
+        .updates__item {
+            clip-path: polygon(0% 10px, 27px 0%, 100% 0%, 100% 100%, 0 100%);
+            background: #F4F4F4;
+            height: 220px;
+            max-width: 270px;
+            padding: 24px 22px 0 24px;
+            
+            @media(max-width: 992px) {
+                max-width: 227px;
+                padding: 24px 24px 0 24px;
+            }
+
+            &::after {
+                clip-path: polygon(0% 10px, 27px 0%, 100% 0%, 100% 100%, 0 100%);
+                background: #fff;
+                position: absolute;
+                content: "";
+                top: 5px;
+                left: 50%;
+                width: calc(100% - 10px);
+                height: calc(100% - 10px);
+                z-index: -1;
+                transform: translateX(-50%);
+            }
+
+            &:hover {
+                background: #f84435;
+            }
+
+            .updates__tag {
+                color: #4F4F4F;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 14px;
+                display: flex;
+                clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 5px, 100% 100%, 0 100%);
+                background: #F4F4F4;
+                padding: 0 14px;
+                height: 27px;
+                width: fit-content;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 24px;
+
+                @media(max-width: 992px) {
+                    padding: 12px;
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+
+            }
+
+            .updates__text {
+                color: #000;
+                font-size: 21px;
+                font-weight: 700;
+                line-height: 24px;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+
+                @media(max-width: 992px) {
+                    font-size: 18px;
+                }
+
+            }
+
+        }
+
+    }
+
+}

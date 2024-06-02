@@ -1,0 +1,120 @@
+.funders {
+    padding: 60px 0;
+    background: #fff;
+
+    @media(max-width: 992px) {
+        padding: 40px 0;
+    }
+
+    @media(max-width: 576px) {
+        padding: 28px 0;
+    }
+
+    .funders__list {
+        gap: 30px;
+        justify-content: space-between;
+
+        @media(max-width: 992px) {
+            row-gap: 20px;
+            column-gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media(max-width: 576px) {
+            gap: 9px;
+        }
+
+    }
+
+    .funder__list-item {
+        gap: 30px;
+        justify-content: space-between;
+
+        @media(max-width: 992px) {
+            row-gap: 20px;
+            column-gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media(max-width: 576px) {
+            gap: 9px;
+        }
+    }
+
+    .funders__item {
+        clip-path: polygon(0% 10px, 27px 0%, 100% 0%, 100% 100%, 0 100%);
+        max-width: 270px;
+        height: 110px;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media(max-width: 576px) {
+            max-width: 125px;
+            height: 52px;
+            clip-path: polygon(0% 10px, 23px 0%, 100% 0%, 100% 100%, 0 100%);
+        }
+
+        &:hover {
+            background: #f84435;
+        }
+
+        img {
+            object-fit: contain;
+            width: 90%;
+        }
+
+        &::after {
+            clip-path: polygon(0% 10px, 27px 0%, 100% 0%, 100% 100%, 0 100%);
+            background: #fff;
+            position: absolute;
+            content: "";
+            top: 3px;
+            left: 50%;
+            width: calc(100% - 6px);
+            height: calc(100% - 6px);
+            z-index: -1;
+            transform: translateX(-50%);
+
+            @media(max-width: 576px) {
+                clip-path: polygon(0% 9px, 21px 0%, 100% 0%, 100% 100%, 0 100%);
+            }
+
+        }
+
+    }
+
+    .navigation__arrow-next {
+        right: -1%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media(max-width: 992px) {
+            right: 2%;
+        }
+
+        @media(max-width: 576px) {
+            right: 10px;
+        }
+
+    }
+
+    .navigation__arrow-prev {
+        left: -1%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media(max-width: 992px) {
+            left: 2%;
+        }
+
+        @media(max-width: 576px) {
+            left: 10px;
+        }
+
+    }
+
+}

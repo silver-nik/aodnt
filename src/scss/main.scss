@@ -1,0 +1,17 @@
+@use "sass:math";
+
+@import "config/fonts";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "config/reset.scss";
+
+@import "config/modificators.scss";
+
+@import "config/base";
+
+@import "components/header";
+@import "components/banners";
+@import "components/posters";
+@import "components/updates";
+@import "components/gallery";
+@import "components/funders";
+@import "components/footer";
