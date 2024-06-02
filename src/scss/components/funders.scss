@@ -52,6 +52,10 @@
         align-items: center;
         justify-content: center;
 
+        picture {
+            width: 90%;
+        }
+
         @media(max-width: 576px) {
             max-width: 125px;
             height: 52px;
