@@ -8,9 +8,13 @@
   <title>@@title</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20240602164721">
+  <link rel="stylesheet" href="css/main.min.css?_v=20240605202422">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240605202422">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js?_v=20240602164721" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js?_v=20240605202422" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240605202422"></script>
+  <script defer="defer" src="js/main.min.js?_v=20240605202422"></script>
+  
 
 </head>
 
@@ -231,81 +235,11 @@
                 </div>
             </div>
 
-            <div class="posters__list-wrapper">
+            <div class="swiper posters__list-wrapper">
 
-                <div class="d-flex justify-content-between posters__list">
+                <div class="d-flex justify-content-between posters__list swiper-wrapper">
 
-                    <div class="position-relative col-lg col-sm poster__item">
-
-                        <div class="h-100 poster">
-                            <span class="poster__age">
-                                6+
-                            </span>
-    
-                            <div class="d-flex flex-column poster__header">
-                                <span class="poster__tag">направление</span>
-                                <span class="poster__title">Название события</span>
-                            </div>
-    
-                            <div class="poster__body">
-                                <picture><source srcset="images/poster-img.webp" type="image/webp"><img src="images/poster-img.png" alt="" class="poster__img"></picture>
-                                <div class="d-flex align-items-end justify-content-around">
-                                    <a href="#" class="d-flex justify-content-center poster__link-container">
-                                        <span class="__black-angle__rt poster__link">подробнее</span>
-                                        <div class="__red-angle__lt poster__icon">
-                                            <img src="./images/click.svg" alt="">
-                                        </div>
-                                    </a>
-                                    <a href="#" class="__red-angle__lt poster__icon poster__toggler">
-                                        <img src="./images/calendar.svg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="h-100 poster__cover">
-                            <span class="poster__close">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L15 15M15 1L1 15" stroke="black" stroke-width="2"/>
-                                </svg>
-                            </span>
-
-                            <span class="poster__title">К/ф «Маленькие волшебницы»</span>
-                            <div class="cover__content">
-                                <span class="poster__tag cover__date">26.01.2021</span>
-                                <ul class="d-flex p-0 cover__times flex-wrap m-0">
-                                    <li class="poster__tag cover__time">
-                                        <a href="#" class="poster__tag">11:50</a>
-                                    </li>
-                                    <li class="poster__tag cover__time">
-                                        <a href="#" class="poster__tag">14:10</a>
-                                    </li>
-                                    <li class="poster__tag cover__time">
-                                        <a href="#" class="poster__tag">19:10</a>
-                                    </li>
-                                    <li class="poster__tag cover__time">
-                                        <a href="#" class="poster__tag">20:40</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="cover__content">
-                                <span class="poster__tag cover__date">27.01.2021</span>
-                                <ul class="d-flex p-0 cover__times flex-wrap m-0">
-                                    <li class="poster__tag cover__time">
-                                        <a href="#" class="poster__tag">11:50</a>
-                                    </li>
-                                    <li class="poster__tag cover__time">
-                                        <a href="#" class="poster__tag">14:10</a>
-                                    </li>
-                                    <li class="poster__tag cover__time">
-                                        <a href="#" class="poster__tag">19:10</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="position-relative col-lg col-sm poster__item">
+                    <div class="position-relative col-lg swiper-slide col-sm poster__item">
 
                         <div class="h-100 poster">
                             <span class="poster__age">
@@ -375,7 +309,7 @@
 
                     </div>
 
-                    <div class="position-relative col-lg col-sm poster__item">
+                    <div class="position-relative col-lg swiper-slide col-sm poster__item">
 
                         <div class="h-100 poster">
                             <span class="poster__age">
@@ -445,7 +379,77 @@
 
                     </div>
 
-                    <div class="position-relative col-lg col-sm poster__item">
+                    <div class="position-relative col-lg swiper-slide col-sm poster__item">
+
+                        <div class="h-100 poster">
+                            <span class="poster__age">
+                                6+
+                            </span>
+    
+                            <div class="d-flex flex-column poster__header">
+                                <span class="poster__tag">направление</span>
+                                <span class="poster__title">Название события</span>
+                            </div>
+    
+                            <div class="poster__body">
+                                <picture><source srcset="images/poster-img.webp" type="image/webp"><img src="images/poster-img.png" alt="" class="poster__img"></picture>
+                                <div class="d-flex align-items-end justify-content-around">
+                                    <a href="#" class="d-flex justify-content-center poster__link-container">
+                                        <span class="__black-angle__rt poster__link">подробнее</span>
+                                        <div class="__red-angle__lt poster__icon">
+                                            <img src="./images/click.svg" alt="">
+                                        </div>
+                                    </a>
+                                    <a href="#" class="__red-angle__lt poster__icon poster__toggler">
+                                        <img src="./images/calendar.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-100 poster__cover">
+                            <span class="poster__close">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L15 15M15 1L1 15" stroke="black" stroke-width="2"/>
+                                </svg>
+                            </span>
+
+                            <span class="poster__title">К/ф «Маленькие волшебницы»</span>
+                            <div class="cover__content">
+                                <span class="poster__tag cover__date">26.01.2021</span>
+                                <ul class="d-flex p-0 cover__times flex-wrap m-0">
+                                    <li class="poster__tag cover__time">
+                                        <a href="#" class="poster__tag">11:50</a>
+                                    </li>
+                                    <li class="poster__tag cover__time">
+                                        <a href="#" class="poster__tag">14:10</a>
+                                    </li>
+                                    <li class="poster__tag cover__time">
+                                        <a href="#" class="poster__tag">19:10</a>
+                                    </li>
+                                    <li class="poster__tag cover__time">
+                                        <a href="#" class="poster__tag">20:40</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cover__content">
+                                <span class="poster__tag cover__date">27.01.2021</span>
+                                <ul class="d-flex p-0 cover__times flex-wrap m-0">
+                                    <li class="poster__tag cover__time">
+                                        <a href="#" class="poster__tag">11:50</a>
+                                    </li>
+                                    <li class="poster__tag cover__time">
+                                        <a href="#" class="poster__tag">14:10</a>
+                                    </li>
+                                    <li class="poster__tag cover__time">
+                                        <a href="#" class="poster__tag">19:10</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="position-relative col-lg swiper-slide col-sm poster__item">
 
                         <div class="h-100 poster__cover">
                             <span class="poster__close">
@@ -518,8 +522,10 @@
                 </div>
 
                 <div class="position-relative scroll__container d-lg-none">
-                    <input class="scroll" type="range" max="100" min="0" step="1" value="0">
+                    <div class="scroll__background"></div>
+                    
                 </div>
+                
 
             </div>
 
@@ -540,34 +546,77 @@
                 </div>
             </div>
 
-            <div class="updates__list-wrapper">
+            <div class="swiper updates__list-wrapper">
+                
+                    <div class="d-flex swiper-wrapper updates__list">
 
-                <div class="d-flex updates__list">
+                        <div class="position-relative col-lg swiper-slide updates__item">
+                            <span class="updates__tag">18.01.2021</span>
+                            <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
+                        </div>
+    
+                        <div class="position-relative col-lg swiper-slide updates__item">
+                            <span class="updates__tag">18.01.2021</span>
+                            <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
+                        </div>
+    
+                        <div class="position-relative col-lg swiper-slide updates__item">
+                            <span class="updates__tag">18.01.2021</span>
+                            <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
+                        </div>
+    
+                        <div class="position-relative col-lg swiper-slide updates__item">
+                            <span class="updates__tag">18.01.2021</span>
+                            <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
+                        </div>
+    
+                        <div class="position-relative col-lg swiper-slide updates__item">
+                            <span class="updates__tag">18.01.2021</span>
+                            <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
+                        </div>
+    
+                        <div class="position-relative col-lg swiper-slide updates__item">
+                            <span class="updates__tag">18.01.2021</span>
+                            <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
+                        </div>
+    
+                        <div class="position-relative col-lg swiper-slide updates__item">
+                            <span class="updates__tag">18.01.2021</span>
+                            <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
+                        </div>
+    
+                        <div class="position-relative col-lg swiper-slide updates__item">
+                            <span class="updates__tag">18.01.2021</span>
+                            <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
+                        </div>
 
-                    <div class="position-relative col-lg updates__item">
-                        <span class="updates__tag">18.01.2021</span>
-                        <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
+                        <div class="position-relative col-lg swiper-slide updates__item">
+                            <span class="updates__tag">18.01.2021</span>
+                            <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
+                        </div>
+    
+                        <div class="position-relative col-lg swiper-slide updates__item">
+                            <span class="updates__tag">18.01.2021</span>
+                            <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
+                        </div>
+    
+                        <div class="position-relative col-lg swiper-slide updates__item">
+                            <span class="updates__tag">18.01.2021</span>
+                            <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
+                        </div>
+    
+                        <div class="position-relative col-lg swiper-slide updates__item">
+                            <span class="updates__tag">18.01.2021</span>
+                            <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
+                        </div>
+                        
+    
                     </div>
-
-                    <div class="position-relative col-lg updates__item">
-                        <span class="updates__tag">18.01.2021</span>
-                        <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
-                    </div>
-
-                    <div class="position-relative col-lg updates__item">
-                        <span class="updates__tag">18.01.2021</span>
-                        <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
-                    </div>
-
-                    <div class="position-relative col-lg updates__item">
-                        <span class="updates__tag">18.01.2021</span>
-                        <p class="updates__text">14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»</p>
-                    </div>
-
-                </div>
+                
 
                 <div class="position-relative scroll__container">
-                    <input class="scroll" type="range" max="100" min="0" step="1" value="0">
+                    <div class="scroll__background"></div>
+                    
                 </div>
 
             </div>
@@ -590,40 +639,42 @@
                 </div>
             </div>
 
-            <div class="container-fluid gallery__fluid-container gallery__list-wrapper">
+            <div class="swiper container-fluid gallery__fluid-container gallery__list-wrapper">
 
-                <div class="d-flex gallery__list">
+                <div class="d-flex swiper-wrapper gallery__list">
 
-                    <a href="#" class="position-relative gallery__item">
+                    <a href="#" class="position-relative swiper-slide gallery__item">
                         <picture><source srcset="./images/gallery-1.webp" type="image/webp"><img src="./images/gallery-1.png" alt=""></picture>
                     </a>
-                    <a href="#" class="position-relative gallery__item">
+                    <a href="#" class="position-relative swiper-slide gallery__item">
                         <picture><source srcset="./images/gallery-2.webp" type="image/webp"><img src="./images/gallery-2.png" alt=""></picture>
                     </a>
-                    <a href="#" class="position-relative gallery__item">
+                    <a href="#" class="position-relative swiper-slide gallery__item">
                         <picture><source srcset="./images/gallery-3.webp" type="image/webp"><img src="./images/gallery-3.png" alt=""></picture>
                     </a>
-                    <a href="#" class="position-relative gallery__item">
+                    <a href="#" class="position-relative swiper-slide gallery__item">
                         <picture><source srcset="./images/gallery-2.webp" type="image/webp"><img src="./images/gallery-2.png" alt=""></picture>
                     </a>
-                    <a href="#" class="position-relative gallery__item">
+                    <a href="#" class="position-relative swiper-slide gallery__item">
                         <picture><source srcset="./images/gallery-3.webp" type="image/webp"><img src="./images/gallery-3.png" alt=""></picture>
                     </a>
-                    <a href="#" class="position-relative gallery__item">
+                    <a href="#" class="position-relative swiper-slide gallery__item">
                         <picture><source srcset="./images/gallery-2.webp" type="image/webp"><img src="./images/gallery-2.png" alt=""></picture>
                     </a>
-                    <a href="#" class="position-relative gallery__item">
+                    <a href="#" class="position-relative swiper-slide gallery__item">
                         <picture><source srcset="./images/gallery-3.webp" type="image/webp"><img src="./images/gallery-3.png" alt=""></picture>
                     </a>
-                    <a href="#" class="position-relative gallery__item">
+                    <a href="#" class="position-relative swiper-slide gallery__item">
                         <picture><source srcset="./images/gallery-2.webp" type="image/webp"><img src="./images/gallery-2.png" alt=""></picture>
                     </a>
 
                 </div>
 
-                <div class="position-relative scroll__container container-md">
-                    <input class="scroll" type="range" max="100" min="0" step="1" value="0">
+                <div class="position-relative scroll__container">
+                    <div class="scroll__background"></div>
+                    
                 </div>
+                
 
             </div>
             
@@ -638,11 +689,11 @@
 
             <div class="position-relative funders__slider">
 
-                <div class="funders__list-wrapper">
+                <div class="swiper funders__list-wrapper">
 
-                    <div class="d-flex funders__list">
+                    <div class="d-flex swiper-wrapper funders__list">
     
-                        <div class="d-flex funder__list-item w-100">
+                        <div class="d-flex funder__list-item swiper-slide w-100">
                             <a href="#" class="position-relative col-lg col-5 funders__item">
                                 <picture><source srcset="./images/funder.webp" type="image/webp"><img src="./images/funder.png" alt="" class="img-fluid"></picture>
                             </a>
@@ -660,7 +711,23 @@
                             </a>
                         </div>
     
-                       
+                        <div class="d-flex funder__list-item swiper-slide w-100">
+                            <a href="#" class="position-relative col-lg col-5 funders__item">
+                                <picture><source srcset="./images/funder.webp" type="image/webp"><img src="./images/funder.png" alt="" class="img-fluid"></picture>
+                            </a>
+        
+                            <a href="#" class="position-relative col-lg col-5 funders__item">
+                                <picture><source srcset="./images/funder-2.webp" type="image/webp"><img src="./images/funder-2.png" alt="" class="img-fluid"></picture>
+                            </a>
+        
+                            <a href="#" class="position-relative col-lg col-5 funders__item">
+                                <picture><source srcset="./images/funder-3.webp" type="image/webp"><img src="./images/funder-3.png" alt="" class="img-fluid"></picture>
+                            </a>
+        
+                            <a href="#" class="position-relative col-lg col-5 funders__item">
+                                <picture><source srcset="./images/funder-4.webp" type="image/webp"><img src="./images/funder-4.png" alt="" class="img-fluid"></picture>
+                            </a>
+                        </div>
     
                     </div>
     
