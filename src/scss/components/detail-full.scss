@@ -1,0 +1,18 @@
+.detail-full {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+
+    p {
+      margin-bottom: 0;  
+    }
+
+    .detail-full__thumbnail {
+        clip-path: polygon(calc(100% - 28px) 0%, 100% 11px, 100% 100%, 0 100%, 0 0);
+        width: 569px;
+        height: 410px;
+        object-fit: cover;
+        margin-left: 31px;
+        margin-bottom: 33px;
+    }
+}

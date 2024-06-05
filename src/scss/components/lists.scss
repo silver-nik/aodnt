@@ -1,0 +1,78 @@
+.lists {
+    padding-bottom: 61px;
+
+    h4 {
+        font-size: 21px;
+        font-weight: 800;
+        line-height: 21px;
+        margin-bottom: 27px;
+    }
+
+    .list__marked-container {
+
+        ul {
+            list-style: square !important;
+            padding-left: 0;
+
+            li {
+                list-style: square !important;
+                display: flex;
+                position: relative;
+
+                p {
+                    padding-left: 29px;
+                }
+
+            }
+
+            li::marker {
+                content: '';
+            }
+
+            li:before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                width: 12px;
+                height: 10px;
+                clip-path: polygon(8px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 36.48%);
+                background-color: #F84435;
+                margin-right: 8px;
+                top: 5px;
+            }
+
+        }
+    }
+
+    .list__number-container {
+        list-style: square !important;
+
+        ol {
+            counter-reset: num;
+            padding-left: 0;
+        }
+
+        li {
+            list-style: square !important;
+            display: flex;
+            position: relative;
+            
+            p {
+                padding-left: 19px;
+            }
+
+        }
+
+        ol li:before {
+            content: counter(num) ".";
+            counter-increment: num;
+            display: inline-block;
+            color: #f84435;
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 18px;
+            text-align: left;
+        }
+    }
+
+}

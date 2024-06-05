@@ -1,0 +1,52 @@
+.table {
+    padding-bottom: 83px;
+    
+    .table__wrapper {
+        background: #E0E0E0;
+        clip-path: polygon(27px 0%, 100% 0, 100% 100%, 0 100%, 0 11px);
+        padding: 5px;
+    }
+
+    table {
+        width: 100%;
+        background: #fff;
+        clip-path: polygon(27px 0%, 100% 0, 100% 100%, 0 100%, 0 11px);
+
+        thead {
+            th {
+                padding-top: 13px;
+                padding-bottom: 5px;
+                padding-left: 24px;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 21px;
+            }
+
+            .counter {
+                width: 6%;
+            }
+
+            .name {
+                width: 40%;
+            }
+
+        }
+
+        tbody {
+            th, td {
+                padding-top: 12px;
+                padding-bottom: 9px;
+                padding-left: 24px;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+            }
+        }
+
+        th, td {
+            border: 1px solid #E0E0E0;
+        }
+
+    }
+
+}
