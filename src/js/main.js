@@ -2,6 +2,7 @@ import { Poster } from "./modules/poster";
 
 import './modules/sliders';
 import './modules/gallery';
+import './modules/forms';
 
 window.addEventListener('DOMContentLoaded', () => {
 

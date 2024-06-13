@@ -17,6 +17,7 @@ import { otfToTtf, ttfToWoff, fontStyle } from './gulp/tasks/fonts.js';
 import { createSvgSprite } from './gulp/tasks/create-svg-sprite.js';
 import { zip } from './gulp/tasks/zip.js';
 import { ftpDeploy } from './gulp/tasks/ftp-deploy.js';
+import connectPHP from 'gulp-connect-php';
 
 const isBuild = process.argv.includes('--build');
 const browserSyncInstance = browserSync.create();
@@ -26,6 +27,7 @@ const handleHTML = html.bind(null, isBuild, browserSyncInstance);
 const handleSCSS = scss.bind(null, isBuild, browserSyncInstance);
 const handleJS = javascript.bind(null, !isBuild, browserSyncInstance);
 const handleImages = images.bind(null, isBuild, browserSyncInstance);
+
 
 /**
  * Наблюдатель за изменениями в файлах
@@ -65,6 +67,15 @@ const deployFTP = gulp.series(reset, mainTasks, ftpDeploy);
  * Выполнение сценария по умолчанию
  * */
 gulp.task('default', dev);
+
+gulp.task('serve', function (done) {
+    connectPHP.server({
+        base: 'app',
+        port: 8000,
+        keepalive: true
+    });
+    done(); // Сигнализирует Gulp о завершении задачи
+});
 
 /**
  * Экспорт сценариев
